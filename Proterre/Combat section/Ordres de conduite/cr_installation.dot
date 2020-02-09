@@ -1,0 +1,23 @@
+digraph {
+
+    graph [layout = dot, overlap=false, rankdir=LR, ordering="out"]
+    
+    node [shape = circle]
+    "Compte rendu\nInstallation"
+    
+    node [shape = rectangle]
+    node [color = "#4ECDC4"]
+    "JE SUIS" [style = filled]
+    "JE SUIS" -> "Position du CDS", "Position des groupes + Missions + Face à", "Position du point de contact"
+    node [color = "#C7F464"] 
+    "JE VOIS" [style = filled]
+    "JE VOIS" -> "Pour chaque direction" -> "profondeur de vue", "Possibilité de tir", "Point particulier du terrain"
+    node [color = "#FF6B6B"]
+    "JE FAIS" [style = filled]
+    "JE FAIS" -> "Mission section", "Capacités de la section (EMD, Proposition CDU)"
+    node [color = "#C44D58"]
+    "JE DEMANDE" [style = filled] 
+    "JE DEMANDE" -> "Besoins particuliers à demander au CDU" 
+    
+    "Compte rendu\nInstallation" -> "JE SUIS", "JE VOIS", "JE FAIS", "JE DEMANDE"
+}
