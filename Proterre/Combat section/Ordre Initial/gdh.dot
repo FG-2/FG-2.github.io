@@ -1,0 +1,22 @@
+digraph {
+
+    graph [layout = dot, overlap=false, rankdir=LR, ordering="out"]
+    node [shape = rectangle, style = filled, color = "#C7F464"]
+    edge [color = grey]
+    
+    GDH [shape = circle, style = bold, color = "#C7F464"]
+    "Primo A", Secundo, "Tertio A", "Tertio B", "OI CDU" [shape = rectangle, style = filled, color = "#FF6B6B"]
+    MEDOA [shape = rectangle, style = filled, color = "#4ECDC4"]
+    
+    GDH -> Départ, MEP, "Mi GOLF", "EM CDS", "Mi Section", "EM CDU", "Mi CIE", "ENI INI", "ENI ULT"
+    
+    Départ                  -> "OI CDU", MEDOA
+    MEP, "Mi GOLF", "EM CDS" -> MEDOA
+    "Mi Section"            -> "Tertio B"
+    "EM CDU"                -> "Tertio A"
+    "Mi CIE"                -> Secundo
+    "ENI INI", "ENI ULT"    -> "Primo A"
+    
+    "Primo A", Secundo, "Tertio A", "Tertio B" -> "OI CDU"
+    
+ }
