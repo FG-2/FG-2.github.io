@@ -1,0 +1,143 @@
+digraph {
+
+    graph [layout = dot, overlap=false, rankdir=LR, ordering="out"]
+    node [shape = rectangle, style = rounded, color = "#C7F464"]
+    edge [color = grey]
+
+    // Sources
+    node [style=filled, color = "#556270"]
+    "OI CDU", "Primo A", "Secundo", "Tertio A", "Tertio B", "Tertio D et E";
+    "MEDOA";
+    "Fiche mission";
+    
+    // Cartouche
+    node [style=filled, color = "#FF6B6B"]
+    SITUATION;
+    global;
+    initial;
+    ultérieur;
+    H1;
+    H2;
+    "Menaces complémentaires";
+    "La compagnie à reçu pour mission";
+    "Situation des voisins immédiats";
+    Renforcement;
+    Population;
+    Médias;
+    ONG;
+    Autres;
+    Terrain;
+    Météo;
+    Divers;
+    "Afin de"
+    "La section a reçu pour mission"
+    "Effet Majeur";
+    "À cet effet";
+    T1;
+    T2;
+    T3;
+    EMD;
+    SOA;
+    G1;
+    G2;
+    G3;
+    Renfort;
+    
+    // GDH
+    node [shape = oval, style = bold, color = "#4ECDC4"]
+    edge [color = "#4ECDC4"]
+    "GDH ENI ULT"       -> "Primo A"
+    "GDH ENI INI"       -> "Primo A"
+    "GDH Mi CIE"        -> Secundo
+    "GDH EM CDU"        -> "Tertio A"
+    "GDH Mi SECTION"    -> "Tertio B"
+    "GDH EM CDS"        -> MEDOA
+    "GDH Mi GOLF"       -> MEDOA
+    "GDH MEP"           -> MEDOA
+    "GDH Départ"        -> MEDOA, "OI CDU"
+    
+
+    node [shape = rectangle, style = rounded, color = "#C7F464"]
+    edge [color = grey]
+    OI -> PRIMO
+    OI -> SECUNDO
+    OI -> TERTIO
+    OI -> QUARTO
+    OI -> QUINTO
+    
+    PRIMO -> SITUATION
+    PRIMO -> "ALPHA\nEnnemi"
+    PRIMO -> "BRAVO\nAmis"
+    PRIMO -> CHARLIE
+    PRIMO -> "DELTA\nContexte"
+    PRIMO -> "ECHO\nMilieu"
+
+    SITUATION -> Primo -> "OI CDU"
+
+    "ALPHA\nEnnemi" -> global                                   -> "Primo A" -> "OI CDU"
+    "ALPHA\nEnnemi" -> initial
+    "ALPHA\nEnnemi" -> ultérieur
+    "ALPHA\nEnnemi" -> H1
+    "ALPHA\nEnnemi" -> H2
+    "ALPHA\nEnnemi" -> "Menaces complémentaires"
+
+    subgraph cluster_INI {
+        "GDH ENI INI" -> "NVAD INI" -> "OBJ INI"
+    }
+
+    initial -> "GDH ENI INI" 
+    "OBJ INI"                    -> "Primo A" -> "OI CDU"
+    
+    subgraph cluster_ULT {
+        "GDH ENI ULT" -> "NVAD ULT" -> "OBJ ULT"
+    }
+    
+    ultérieur -> "GDH ENI ULT"
+    "OBJ ULT"                    -> "Primo A" -> "OI CDU"
+    
+    H1, H2 -> "Mode d'action + Mode de déplacement + Position"  -> "Primo A" -> "OI CDU"
+    
+    "BRAVO\nAmis" -> "La compagnie à reçu pour mission" -> Secundo -> "OI CDU"
+    "BRAVO\nAmis" -> "Situation des voisins immédiats"
+    "Situation des voisins immédiats" ->  "Position + Mission + Face à + GDH + EMD" -> MEDOA
+    
+    CHARLIE -> Renforcement -> "Néant si articulation organique", "N/V/Origine/GDH/Durée si articulation renforcée" -> MEDOA
+    
+    "DELTA\nContexte"   -> Population, Médias, ONG, Autres  -> FAVORABLE, DÉFAVORABLE, NÉANT
+    "ECHO\nMilieu"      -> Terrain, Météo, Divers           -> FAVORABLE, DÉFAVORABLE, NÉANT
+    FAVORABLE, DÉFAVORABLE -> "Justification + Conséquences"
+    FAVORABLE, DÉFAVORABLE, NÉANT -> "Tertio D et E" -> "OI CDU"
+    
+    SECUNDO -> "Afin de", "La section a reçu pour mission"
+    
+    "Afin de"                           -> "Le JE VEUX du CDU"      -> "Tertio A" -> "OI CDU"
+    "La section a reçu pour mission"    -> "recopier in extenso"    -> "Tertio B" -> "OI CDU"
+    
+    TERTIO -> "ALPHA\nIntention CDS"
+    TERTIO -> "BRAVO\nRépartition des missions"
+    TERTIO -> "CHARLIE\nCoordination"
+    
+    "ALPHA\nIntention CDS" -> "Effet Majeur", "À cet effet", T1, T2, T3, EMD
+    
+    "Effet Majeur", "À cet effet", T1, T2, T3 -> "Fiche mission"
+    
+    "Effet Majeur"  -> "GDH EM CDS"
+    "À cet effet"   -> "GDH Départ"
+    T1              -> "GDH MEP"
+    T2              -> "GDH Mi GOLF"
+    T3              -> "GDH Fin Mission"
+    EMD             -> "P1 T2" -> "Tertio A" -> "OI CDU"
+    EMD             -> "P2 T3" -> "Tertio A" -> "OI CDU"
+    EMD             -> "P3 déduction du CDS"
+    
+    "BRAVO\nRépartition des missions" -> SOA, G1, G2, G3, Renfort
+    
+    SOA -> "Prendre contact avec ADU pour donner position PT CTC TC1"
+    SOA -> "Définir l'emplacement du NB et du NP"
+    SOA -> "Coordonner et diriger l'action du groupe en réserve"
+    SOA -> "Reconnaître une zone d'installation pour les renforts"
+
+    G1, G2, G3, Renfort -> "À partir de", Mission, "Face à", "GDH Mi GOLF", "En Mesure De"
+
+
+}

@@ -1,0 +1,13 @@
+digraph {
+
+    graph [layout = dot, overlap=false, rankdir=LR, ordering="out"]
+    node [shape = rectangle, style = filled, color = "#C7F464"]
+    edge [color = grey]
+
+    
+    "Mi Section" -> "EM CDS"        [ label = "-15/20min" ]
+    "EM CDS"        -> "Mi GOLF"    [ label = "-15/20min" ]
+    "Mi GOLF"       -> MEP          [ label = "-1H30/2H" ]
+    MEP             -> Départ       [ label = "selon distance" ]
+    
+}

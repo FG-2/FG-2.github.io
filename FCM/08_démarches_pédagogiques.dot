@@ -1,0 +1,46 @@
+digraph {
+
+    graph [layout = neato, overlap=false]
+    node [shape = rectangle, style = bold]
+    edge [color = grey]
+    
+    Pédagogie [shape = circle, color = grey]
+    
+    node [color = "#556270"]
+    "4 Piliers\nde la FCM" [style = filled]
+    "4 Piliers\nde la FCM" -> Homme
+    "4 Piliers\nde la FCM" -> Citoyen
+    "4 Piliers\nde la FCM" -> Soldat
+    "4 Piliers\nde la FCM" -> "Le chef"
+    
+    node [color = "#4ECDC4"]
+    "5 Matières\nfondamentales" [style = filled]
+    "5 Matières\nfondamentales" -> Éduquer
+    "5 Matières\nfondamentales" -> Instruire
+    "5 Matières\nfondamentales" -> Commander
+    "5 Matières\nfondamentales" -> Communiquer
+    "5 Matières\nfondamentales" -> "S'instruire"
+    
+    node [color = "#C7F464"]
+    "3 matières\npédagogiques" [style = filled]
+    "3 matières\npédagogiques" -> Magistrale
+    "3 matières\npédagogiques" -> Démontrer
+    "3 matières\npédagogiques" -> Interroger
+    
+    node [color = "#FF6B6B"]
+    "5 types\nde mémoire" [style = filled]
+    "5 types\nde mémoire" -> Épisodique
+    "5 types\nde mémoire" -> Perceptive
+    "5 types\nde mémoire" -> Sémantique
+    "5 types\nde mémoire" -> Procédurale
+    "5 types\nde mémoire" -> "Mémoire de travail"
+     
+    node [color = "#C44D58"]
+    "4 Piliers\nde l'apprentissage" [style = filled]
+    "4 Piliers\nde l'apprentissage" -> "1. attention"
+    "4 Piliers\nde l'apprentissage" -> "2. engagement actif"
+    "4 Piliers\nde l'apprentissage" -> "3. retour d'information"
+    "4 Piliers\nde l'apprentissage" -> "4. consolidation"
+    
+    Pédagogie -> "4 Piliers\nde la FCM", "5 Matières\nfondamentales", "3 matières\npédagogiques", "5 types\nde mémoire", "4 Piliers\nde l'apprentissage"
+}

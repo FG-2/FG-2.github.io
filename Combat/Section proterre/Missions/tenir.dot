@@ -1,0 +1,29 @@
+digraph {
+
+    graph [layout = neato, overlap=false]
+    node [shape = rectangle, style = bold]
+    edge [color = grey]
+
+    TENIR [shape = circle, color = "#C7F464"]
+   
+    // Points clefs
+    node [color = "#FF6B6B"]
+    "Points clefs"  [style = filled]
+    "Points clefs" -> "zone action:\n 1 à 3 terrains de 300x100m";
+    "Points clefs" -> "étude approfondie du terrain \n (aspects FAV/DEF à notre action)";
+    "Points clefs" -> "Prévoir un itinéraire\nde repli";
+    
+    // Principes
+    node [color = "#4ECDC4"]
+    Principes       [style = filled]
+    Principes -> "Occuper physiquement \n la position"
+    Principes -> "Mise en place d'un dispositif \n s'inscrivant dans la durée";
+
+    // Symbole APP-6A
+    node [color = "#C44D58"]
+    symbole [image="section_tenir.png", label="", style = dotted]
+
+    TENIR -> {Principes, "Points clefs", symbole}
+
+
+}

@@ -1,0 +1,42 @@
+digraph {
+
+    graph [layout = dot, overlap=false, rankdir=LR, ordering="out"]
+    node [shape = rectangle, style = filled, color = "#C7F464"]
+    edge [color = grey]
+    
+    subgraph cluster_Cartouches {
+    label = "cartouches"
+    { rank = same ; Articulation, "ALPHA\nForces adverses", "BRAVO\nForces amies", "CHARLIE\nRenforcements et prélèvements",  "DELTA\nPopulation",  "ECHO\nMédias",  "FOXTROT\nDivers",  "Afin de",  "La section a reçu pour mission",  "JE VEUX",  "À CET EFFET",  "T1",  "T2",  "T3",  "EMD", "CHARLIE\nInstructions de coordination" }
+    }
+    
+    OCA -> Articulation
+    OCA -> PRIMO
+    OCA -> SECUNDO
+    OCA -> TERTIO
+    
+    PRIMO -> "ALPHA\nForces adverses"
+    PRIMO -> "BRAVO\nForces amies"
+    PRIMO -> "CHARLIE\nRenforcements et prélèvements"
+    PRIMO -> "DELTA\nPopulation"
+    PRIMO -> "ECHO\nMédias"
+    PRIMO -> "FOXTROT\nDivers"
+    
+    SECUNDO -> "Afin de", "La section a reçu pour mission"
+    
+    TERTIO -> "ALPHA\nIdée de manoeuvre"
+    TERTIO -> "BRAVO\nMissions attribuées aux groupes"
+    TERTIO -> "CHARLIE\nInstructions de coordination"
+    
+    "ALPHA\nIdée de manoeuvre" -> "JE VEUX"
+    "ALPHA\nIdée de manoeuvre" -> "À CET EFFET"
+    "ALPHA\nIdée de manoeuvre" -> "T1"
+    "ALPHA\nIdée de manoeuvre" -> "T2"
+    "ALPHA\nIdée de manoeuvre" -> "T3"
+    "ALPHA\nIdée de manoeuvre" -> "EMD"
+    
+    Articulation -> "Section organique", "Section renforcée"
+    "ALPHA\nForces adverses"
+    "Afin de" -> "Tertio A OCA CDU", "Tertio A OI CDU sans GDH"
+    
+
+}    

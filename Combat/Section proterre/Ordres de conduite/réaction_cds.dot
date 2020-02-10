@@ -1,0 +1,12 @@
+digraph {
+
+    graph [layout = dot, overlap=false, rankdir=LR, ordering="out"]
+    
+    node [shape = circle]
+    "Réaction\ndu CDS"
+    
+    node [shape = rectangle]
+    "Réaction\ndu CDS" -> "Je fais", "Je manoeuvre", "Je rends compte au CDU"
+    
+    
+}

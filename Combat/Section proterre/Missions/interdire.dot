@@ -1,0 +1,29 @@
+digraph {
+
+    graph [layout = neato, overlap=false]
+    node [shape = rectangle, style = bold]
+    edge [color = grey]
+
+    INTERDIRE [shape = circle, color = "#C7F464"]
+   
+    // Points clefs
+    node [color = "#FF6B6B"]
+    "Points clefs"  [style = filled]
+    "Points clefs" -> "front d'installation\n200-300m";
+    "Points clefs" -> "dispositif en avant\nde la ligne ou du point\nà interdire";
+    "Points clefs" -> "MEP dans la\nprofondeur";
+    "Points clefs" -> "Prévoir un itinéraire\nde repli";
+    
+    // Principes
+    node [color = "#4ECDC4"]
+    Principes       [style = filled]
+    Principes -> "Mission limitée dans le temps";
+
+    // Symbole APP-6A
+    node [color = "#C44D58"]
+    symbole [image="section_interdire.png", label="", style = dotted]
+
+    INTERDIRE -> {Principes, "Points clefs", symbole}
+
+
+}

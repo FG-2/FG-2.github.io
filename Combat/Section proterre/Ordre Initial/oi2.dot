@@ -1,0 +1,83 @@
+digraph {
+
+    graph [layout = dot, overlap=false, rankdir=LR, ordering="out"]
+    node [shape = rectangle, style = filled, color = "#C7F464"]
+    edge [color = grey]
+
+    subgraph cluster_Cartouches {
+    label = "cartouches"
+    "Situation générale";
+    global;
+    initial;
+    ultérieur;
+    H1;
+    H2;
+    "Menaces complémentaires";
+    "La compagnie à reçu pour mission";
+    "Situation des voisins immédiats";
+    Renforcement;
+    Population;
+    Médias;
+    ONG;
+    Autres;
+    Terrain;
+    Météo;
+    Divers;
+    "Afin de"
+    "La section a reçu pour mission"
+    "Effet Majeur";
+    "À cet effet";
+    T1;
+    T2;
+    T3;
+    EMD;
+    SOA;
+    G1;
+    G2;
+    G3;
+    Renfort;
+    }
+
+
+    OI -> PRIMO
+    OI -> SECUNDO
+    OI -> TERTIO
+    OI -> QUARTO
+    OI -> QUINTO
+    
+    PRIMO -> SITUATION
+    PRIMO -> "ALPHA\nEnnemi"
+    PRIMO -> "BRAVO\nAmis"
+    PRIMO -> CHARLIE
+    PRIMO -> "DELTA\nContexte"
+    PRIMO -> "ECHO\nMilieu"
+    
+    SITUATION -> "Situation générale"
+    
+    "ALPHA\nEnnemi" -> global
+    "ALPHA\nEnnemi" -> initial
+    "ALPHA\nEnnemi" -> ultérieur
+    "ALPHA\nEnnemi" -> H1
+    "ALPHA\nEnnemi" -> H2
+    "ALPHA\nEnnemi" -> "Menaces complémentaires"
+    
+    "BRAVO\nAmis" -> "La compagnie à reçu pour mission", "Situation des voisins immédiats"
+    
+    CHARLIE -> Renforcement
+    
+    "DELTA\nContexte"   -> Population, Médias, ONG, Autres
+    
+    "ECHO\nMilieu"      -> Terrain, Météo, Divers 
+    
+    SECUNDO -> "Afin de", "La section a reçu pour mission"
+    
+    TERTIO -> "ALPHA\nIntention CDS"
+    TERTIO -> "BRAVO\nRépartition des missions"
+    TERTIO -> "CHARLIE\nCoordination"
+    
+    "ALPHA\nIntention CDS"              -> "Effet Majeur", "À cet effet", T1, T2, T3, EMD
+    "BRAVO\nRépartition des missions"   -> SOA, G1, G2, G3, Renfort
+    
+}
+
+

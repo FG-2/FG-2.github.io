@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   width="329"
+   height="273.5"
+   id="svg2160">
+  <defs
+     id="defs2162" />
+  <g
+     transform="translate(-96,-400.86218)"
+     id="layer1">
+    <g
+       transform="translate(-4,0)"
+       style="stroke:#0000ff;stroke-opacity:1"
+       id="g4112">
+      <path
+         d="M 104.5,669.86218 L 424.5,669.86218 L 424.5,459.86218 L 104.5,459.86218 L 104.5,669.86218 z "
+         style="fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path2168" />
+      <path
+         d="M 105,669.36218 L 424,462.36218 M 105,460.36218 L 423,669.36218"
+         style="fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path3141" />
+    </g>
+    <g
+       style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-opacity:1"
+       id="g5091">
+      <path
+         d="M 244 406.86218 A 10.5 10.5 0 1 1  223,406.86218 A 10.5 10.5 0 1 1  244 406.86218 z"
+         transform="translate(27,10)"
+         style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:9;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path4116" />
+      <path
+         d="M 244 406.86218 A 10.5 10.5 0 1 1  223,406.86218 A 10.5 10.5 0 1 1  244 406.86218 z"
+         transform="translate(-36,10)"
+         style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:9;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path5087" />
+      <path
+         d="M 244 406.86218 A 10.5 10.5 0 1 1  223,406.86218 A 10.5 10.5 0 1 1  244 406.86218 z"
+         transform="translate(90,9)"
+         style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:9;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path5089" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+digraph {
+
+    graph [layout = neato, overlap=false]
+    node [shape = rectangle, style = bold]
+    edge [color = grey]
+
+    SOUTENIR [shape = circle, color = "#C7F464"]
+   
+    // Points clefs
+    node [color = "#FF6B6B"]
+    "Points clefs"  [style = filled]
+    "Points clefs" -> "";
+    "Points clefs" -> "";
+    "Points clefs" -> "";
+    
+    // Principes
+    node [color = "#4ECDC4"]
+    Principes       [style = filled]
+    Principes -> ""
+    Principes -> "";
+
+    // Symbole APP-6A
+    node [color = "#C44D58"]
+    symbole [image="section_soutenir.png", label="", style = dotted]
+
+    SOUTENIR -> {Principes, "Points clefs", symbole}
+
+
+}

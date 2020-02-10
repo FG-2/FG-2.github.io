@@ -1,0 +1,33 @@
+digraph {
+
+    graph [layout = neato, overlap=false]
+    node [shape = rectangle, style = bold]
+    edge [color = grey]
+
+    SURVEILLER [shape = circle, color = "#C7F464"]
+   
+    // Points clefs
+    node [color = "#FF6B6B"]
+    "Points clefs"  [style = filled]
+    "Points clefs" -> "discretion de la MEP\n jusqu'à l'exfiltration";
+    "Points clefs" -> "front d'installation 300m";
+    "Points clefs" -> "front d'observation 1000m";
+    "Points clefs" -> "conserver si possible\nune réserve d'intervention";
+    "Points clefs" -> "procédure rigoureuse\nd'identification";
+    
+    // Principes
+    node [color = "#4ECDC4"]
+    Principes       [style = filled]
+    Principes -> "Déceler"
+    Principes -> "Alerter"
+    Principes -> "Renseigner"
+    Principes -> "Faire éventuellement\ndeclencher des tirs";
+
+    // Symbole APP-6A
+    node [color = "#C44D58"]
+    symbole [image="section_surveiller.png", label="", style = dotted]
+
+    SURVEILLER -> {Principes, "Points clefs", symbole}
+
+
+}

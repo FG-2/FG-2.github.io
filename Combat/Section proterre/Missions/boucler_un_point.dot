@@ -1,0 +1,30 @@
+digraph {
+
+    graph [layout = neato, overlap=false]
+    node [shape = rectangle, style = bold]
+    edge [color = grey]
+
+    "BOUCLER\nUN POINT" [shape = circle, color = "#C7F464"]
+   
+    // Points clefs
+    node [color = "#FF6B6B"]
+    "Points clefs"  [style = filled]
+    "Points clefs" -> "Renseignement et\ninterdiction";
+    "Points clefs" -> "Prise en compte\nde l'environnement";
+    "Points clefs" -> "Étanchéité du dispositif";
+    
+    // Principes
+    node [color = "#4ECDC4"]
+    Principes       [style = filled]
+    Principes -> MO
+    MO -> "au sein d'une\nmission compagnie"
+    MO -> "autonome sur\nun objectif restreint";
+
+    // Symbole APP-6A
+    node [color = "#C44D58"]
+    symbole [image="section_boucler_un_point.png", label="", style = dotted]
+
+    "BOUCLER\nUN POINT" -> {Principes, "Points clefs", symbole}
+
+
+}
