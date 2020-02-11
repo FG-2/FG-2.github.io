@@ -1,38 +1,28 @@
 digraph {
 
-    graph [ layout = dot, rankdir = "LR"]
+    graph [ layout = neato, overlap=false]
     node [shape = rectangle, style = bold]
     edge [color = grey]
     
     ARTICULATIONS [shape = circle, color = "#C7F464"]
     
     node [style = filled]
-    // GOLF 1
-    "G1 DÉFENDRE"       [ color = "#4ECDC4"]
-    "G1 APPUYER"        [ color = "#FF6B6B"]
-    "G1 SURVEILLER"     [ color = "#556270"]
     
     // GOLF 2
-    "G2 DÉFENDRE"       [ color = "#4ECDC4"]
-    "G2 APPUYER"        [ color = "#FF6B6B"]
-    "G2 SURVEILLER"     [ color = "#556270"]
+    "G1 + G2 DÉFENDRE\nG3 SURVEILLER/APPUYER"   [ color = "#4ECDC4"]
+    "G1 + G2 + G3 SURVEILLER"                   [ color = "#FF6B6B"]
     
-    // GOLF 3
-    "G3 DÉFENDRE"       [ color = "#4ECDC4"]
-    "G3 APPUYER"        [ color = "#FF6B6B"]
-    "G3 SURVEILLER"     [ color = "#556270"]
+    ARTICULATIONS -> "G1 + G2 DÉFENDRE\nG3 SURVEILLER/APPUYER"
+    ARTICULATIONS -> "G1 + G2 + G3 SURVEILLER"
     
-    ARTICULATIONS -> TENIR
-    ARTICULATIONS -> INTERDIRE
-    ARTICULATIONS -> SURVEILLER
-    ARTICULATIONS -> SOUTENIR
-    ARTICULATIONS -> "BOUCLER UN POINT"
+    "G1 + G2 DÉFENDRE\nG3 SURVEILLER/APPUYER"   -> TENIR, INTERDIRE
+    "G1 + G2 + G3 SURVEILLER"                   -> "BOUCLER UN POINT", SOUTENIR, SURVEILLER
     
-    TENIR               -> "G1 DÉFENDRE", "G2 DÉFENDRE", "G3 SURVEILLER"
-    INTERDIRE           -> "G1 DÉFENDRE", "G2 DÉFENDRE", "G3 SURVEILLER"
-    SURVEILLER          -> "G1 SURVEILLER", "G2 SURVEILLER", "G3 SURVEILLER"
-    SOUTENIR            -> "G1 SURVEILLER", "G2 SURVEILLER", "G3 SURVEILLER"
-    "BOUCLER UN POINT"  -> "G1 SURVEILLER", "G2 SURVEILLER", "G3 SURVEILLER"
+    TENIR               [ color = "#C7F464" ]
+    INTERDIRE           [ color = "#C7F464" ]
+    SURVEILLER          [ color = "#C7F464" ]
+    SOUTENIR            [ color = "#C7F464" ]
+    "BOUCLER UN POINT"  [ color = "#C7F464" ]
     
     
 }

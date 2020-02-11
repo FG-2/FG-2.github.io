@@ -10,6 +10,7 @@ digraph {
     
     "Je fais" -> "J'alerte mes groupes"
     "Je fais" -> "Je passe en niveau ..."
+    "Je fais" -> "Je riposte si TIC"
     
     "Je manoeuvre" -> "Je demande un appui de l'élément réservé"
     "Je manoeuvre" -> "Je réorganise mon dispositif"
