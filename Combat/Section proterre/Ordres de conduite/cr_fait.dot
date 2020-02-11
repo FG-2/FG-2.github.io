@@ -17,9 +17,11 @@ digraph {
     "JE FAIS" -> "Mesures prise par la section", "Mesures en cours d'éxécution", "Mission section", "Capacité de la section (EMD, Proposition CDU)"
     node [color = "#C44D58"]
     "JE DEMANDE" [style = filled] 
-    "JE DEMANDE" -> "Besoins particuliers à demander au CDU" 
+    "JE DEMANDE" -> "Besoins particuliers à demander au CDU"
     
 
     "Compte rendu\nd'un fait" -> "JE SUIS", "JE VOIS", "JE FAIS", "JE DEMANDE"
+    
+    "Besoins particuliers à demander au CDU" -> "une evasan, délai envoi messagerie 5 minutes"
     
 }

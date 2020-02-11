@@ -1,0 +1,38 @@
+digraph {
+
+    graph [
+        layout = dot,
+        rankdir = "LR"]
+    edge [overlap = false, splines = true]
+    node [shape = rectangle]
+
+    
+    edge [color = grey] 
+    SOUTENIR            -> PRÉPARER -> ÉXECUTER -> MANOEUVRER -> RÉORGANISER -> "RENDRE-COMPTE"
+
+    edge [color = "#4ECDC4"]
+    "BOUCLER UN POINT"  -> PRÉPARER -> ÉXECUTER -> RENSEIGNER -> "FILTRER/INTERDIRE" -> INTERVENIR -> RÉORGANISER
+
+    edge [color = grey]
+    TENIR               -> PRÉPARER -> ÉXECUTER -> MANOEUVRER -> RÉORGANISER -> "RENDRE-COMPTE"
+
+    edge [color = "#FF6B6B"]
+    SURVEILLER          -> PRÉPARER -> ACQUÉRIR -> OBSERVER -> MANOEUVRER -> "DETRUIRE/COUVRIR" -> RÉORGANISER -> "RENDRE-COMPTE"
+    
+    edge [color = grey]
+    INTERDIRE           -> PRÉPARER -> ÉXECUTER -> MANOEUVRER -> RÉORGANISER -> "RENDRE-COMPTE"
+    
+
+    subgraph cluster_missions {
+    label = "Missions SECTION"
+    rank = "same"
+    TENIR;
+    SURVEILLER;
+    SOUTENIR;
+    INTERDIRE;
+    "BOUCLER UN POINT";
+    }
+   
+    "BOUCLER UN POINT", RENSEIGNER, "FILTRER/INTERDIRE", INTERVENIR [color = "#4ECDC4", style = filled]
+    SURVEILLER, ACQUÉRIR, OBSERVER, "DETRUIRE/COUVRIR"  [color = "#FF6B6B", style = filled]
+}

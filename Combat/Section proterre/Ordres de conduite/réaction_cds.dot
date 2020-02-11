@@ -8,5 +8,13 @@ digraph {
     node [shape = rectangle]
     "Réaction\ndu CDS" -> "Je fais", "Je manoeuvre", "Je rends compte au CDU"
     
+    "Je fais" -> "J'alerte mes groupes"
+    "Je fais" -> "Je passe en niveau ..."
+    
+    "Je manoeuvre" -> "Je demande un appui de l'élément réservé"
+    "Je manoeuvre" -> "Je réorganise mon dispositif"
+    
+    "Je rends compte au CDU" -> "J'annonce mon attention de rendre compte"
+    
     
 }
