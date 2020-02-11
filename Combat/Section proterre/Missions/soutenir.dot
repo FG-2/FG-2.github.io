@@ -9,15 +9,18 @@ digraph {
     // Points clefs
     node [color = "#FF6B6B"]
     "Points clefs"  [style = filled]
-    "Points clefs" -> "";
-    "Points clefs" -> "";
-    "Points clefs" -> "";
+    "Points clefs" -> "Repérer les positions précises des unités soutenues";
+    "Points clefs" -> "Mesures de coordination très précises entre soutenant et soutenue";
+    "Points clefs" -> "Rapidité d'intervention / Conservation liberté d'action";
     
     // Principes
     node [color = "#4ECDC4"]
     Principes       [style = filled]
-    Principes -> ""
-    Principes -> "";
+    Principes -> "Notion de sécurisation";
+    Principes -> "Notion d'assistance";
+    
+    "Notion de sécurisation" -> "MEP dispositif de dissuasion", "MEP d'un cordon de sécurisation";
+    "Notion d'assistance" -> "aide aux populations", "participer à la reconstruction de l'État/Infrastructure";
 
     // Symbole APP-6A
     node [color = "#C44D58"]
