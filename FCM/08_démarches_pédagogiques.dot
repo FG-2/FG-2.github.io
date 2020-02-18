@@ -19,7 +19,7 @@ digraph {
     "5 Matières\nfondamentales" -> Instruire
     "5 Matières\nfondamentales" -> Commander
     "5 Matières\nfondamentales" -> Communiquer
-    "5 Matières\nfondamentales" -> "S'instruire"
+    "5 Matières\nfondamentales" -> "Se situer"
     
     node [color = "#C7F464"]
     "3 matières\npédagogiques" [style = filled]
