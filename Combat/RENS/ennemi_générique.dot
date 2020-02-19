@@ -1,0 +1,23 @@
+digraph {
+
+    graph [layout = dot, overlap=false]
+    node [shape = rectangle, style = bold]
+    edge [color = grey]
+
+    "ENI" [shape = circle, color = "#C7F464"]
+   
+    // Conventionnel
+    node [color = "#FF6B6B"]
+    Conventionnel  [style = filled]
+    Conventionnel -> Symetrique;
+    Conventionnel -> Dissymetrique;
+    
+    // Non conventionnel
+    node [color = "#4ECDC4"]
+    "Non conventionnel"      [style = filled]
+    "Non conventionnel" -> Assymetrique;
+
+    "ENI" -> {Conventionnel, "Non conventionnel"}
+
+
+}
